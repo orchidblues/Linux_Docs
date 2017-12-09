@@ -1,0 +1,9 @@
+git clone http://domain/user/project/package.git
+git add filename
+git commit -m “tag message”
+git push origin master
+
+
+cd to git folder
+git checkout branchname
+
