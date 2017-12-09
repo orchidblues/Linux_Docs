@@ -1,0 +1,6 @@
+pwd   parent directory
+	folders
+/etc  configurations
+boot  boot loader
+bin   executable commands
+
