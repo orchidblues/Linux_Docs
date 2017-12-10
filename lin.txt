@@ -1,6 +1,23 @@
-pwd   parent directory
 	folders
+      -----------	
 /etc  configurations
 boot  boot loader
 bin   executable commands
+	
+	Commands
+      -----------
+pwd     : displays parent directory
 
+cat     : displays file content ::cat test.txt
+
+touch   : creates two or more files ::touch a{1..3}test.txt
+
+rm -rf  : removes files ::rm -rf test.txt
+
+tar     : creates zip files ::tar cvf test.tar *.txt
+        : unzip tar files ::tar xvf test.tar
+	: view an existing tar archive ::tar tvf test.tar  
+
+grep	:search for a given string in a file ::grep -i "test" test.txt
+	:prints the matched line along with the 3 lines after it ::grep -A 3 -i "test" test.txt
+	:prints for a given string in all files recursively ::grep -r "test"
