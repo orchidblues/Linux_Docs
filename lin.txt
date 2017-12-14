@@ -18,6 +18,20 @@ tar     : creates zip files ::tar cvf test.tar *.txt
         : unzip tar files ::tar xvf test.tar
 	: view an existing tar archive ::tar tvf test.tar  
 
-grep	:search for a given string in a file ::grep -i "test" test.txt
-	:prints the matched line along with the 3 lines after it ::grep -A 3 -i "test" test.txt
-	:prints for a given string in all files recursively ::grep -r "test"
+grep	: search for a given string in a file ::grep "test" test.txt
+	: search for a given string case insensitive :grep -i "test" test.txt
+	: prints the matched line along with the 3 lines after it ::grep -A 3 -i "test" test.txt
+	: prints for a given string in all files recursively ::grep -r "test"
+
+sed	: searching,find and replace, insertion or deletion on a file
+	: replace unix by linux on first occurrence of each line ::sed 's/unix/linux/' test.txt
+	: replaces secund occurrence ::sed 's/unix/linux/2' test.txt
+	: replaces all the occurrence ::sed 's/unix/linux/g' test.txt
+	: to delete a particular line ::sed 'nd' test.txt     n=1,2,..
+	: to delete last line ::sed '$d' test.txt
+	: to delete from to last ::sed '3,$d' test.txt
+
+awk	: prints all lines in a file  ::awk '{print}' test.txt
+	: prints all lines which matches the "manaager"  ::awk '/manager/ {print}' test.txt
+	: prints 3rd and 4th column of the file  ::awk '{print $3,$4}' test.txt
+
