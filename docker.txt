@@ -1,0 +1,68 @@
+    Docker
+--------------		
+
+	Docker is a container management service
+
+Docker run command	:  sudo docker run Image
+			   sudo docker run hello-world --> commsnd eill download the hello world image
+
+
+Docker Hub
+--------
+	Docker Hub is a registry service on the cloud that allows you to download Docker images that are built by other communities
+
+Download 'jenkins' server image from Docker hub
+-------------------------
+	sudo docker pull jenkins
+	sodo docker run -p 8080:8080 -p 50000:50000 jenkins  -->jenkins is the name of image
+								-p is used to map the port number of the internaldocker image to our main ubuntu server
+
+
+Docker Images
+-----------
+	An image is a combination of a file system and parameters
+
+Running CentOs image
+------------------
+	sudo docker run centos -it /bin/bash    ----> -it  is used to mention that run in interactive mode
+						       /bin/bash is used to the bash shell once CentOs is up and running
+
+
+
+Displaying Docker Images 	
+------------------------ sudo docker images	---->is used to display all the images currently instaaled on the system
+
+
+Downloading Docker Images
+------------------------  sudo docker run centos  -->command will download CentOs image
+
+Removing Docker Images
+---------------------   sudo docker rmi ImageID  -->ImageID ::this is th id of the image which needs to be removed
+			sudo docker rmi 7a86f8ffcb25
+
+docker images -q	-->this command is used to return only the image ID's of the images
+		           sudo docker images -q
+
+docker inspect          -->This command is used see the details of an image or container.
+			   sudo docker inspect Repository   --> Repository is the name of the image
+			   sudo docker inspect jenkins
+
+
+Docker Containers
+----------------
+		Containers are instances of docker images that can be run using the docker run command.The basic purpose of docker is to run containers
+
+Running Containers
+----------------- sudo docker run -it centos /bin/bash   .Then hit Ctrl+p to return OS shell
+
+Listing of Containers
+-----------------sudo docker ps	   -->The output will show currently running containers
+		 sudo docker ps -a -->used to list all of the containers on the system
+
+Docker History
+-------------  With this command,we can see all the commands that were run with an image via a container.
+		sudo docker history ImageID	
+		sudo docker history centos    ---> command will show all the commands that were run against the centos image.
+
+ 
+
