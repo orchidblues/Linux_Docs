@@ -65,4 +65,34 @@ Docker History
 		sudo docker history centos    ---> command will show all the commands that were run against the centos image.
 
  
+Working with Containers
+--------------------
 
+docker top	--> With this command we can see top processes with in a container
+		    docker top ContainerID
+
+docker stop	--> This command is used to stop a running container
+		    sudo docker stop ContainerID
+
+docker rm	-->This command is used to delete a container
+		   sudo docker rm ContainerID
+
+docker stats	-->This command is usede to provide the statistics of a running container
+		   sudo docker stats ContainerID
+
+docker attach	-->This command is used to attach to a running container
+		   sudo docker attach ContaimerID
+
+docker pause	-->This command is used to pause the processes in a running container
+		   sudo docker pause ContainerID
+
+docker unpause	-->This command is used to unpause the processes in a running container
+		   sudo docker unpause ContainerID
+
+docker kill	-->This command is used to kill the processes in a running container
+		   sudo docker kill ContainerID	 
+
+service docker stop -->This command is used to stop docker Daemon process  
+			sudo service docker stop
+
+service docker start -->This command is used to start docker Daemon process 
