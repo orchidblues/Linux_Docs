@@ -6,7 +6,7 @@ bin   executable commands
 	
 	Commands
       -----------
-pwd     : displays parent directory
+pwd     : displays parent directory(Print Working Directory)
 
 cat     : cat test.txt  ::displays file content 
 	: cat test1.txt > test2.txt  :: output of cat(test1.txt)is redirected to test2.txt 
